@@ -247,11 +247,6 @@ namespace LocationsModule.Data.OpenAccess
 				return SetExpressions(this.GetLocations(), filterExpression, orderExpression, skip, take, ref totalCount);
 			}
 
-			if (itemType == typeof(Comment))
-			{
-				return SetExpressions(this.GetComments(), filterExpression, orderExpression, skip, take, ref totalCount);
-			}
-
 			throw GetInvalidItemTypeException(itemType, this.GetKnownTypes());
 		}
 

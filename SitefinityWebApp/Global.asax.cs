@@ -49,7 +49,7 @@ namespace SitefinityWebApp
 
         private void CreateSampleWorker(object[] args)
         {                        
-            //SampleUtilities.RegisterToolboxWidget("Locations Widget", typeof(LocationsView), "Samples");
+            SampleUtilities.RegisterToolboxWidget("Locations Widget", typeof(LocationsView), "Samples");
             SampleUtilities.RegisterTheme(SamplesThemeName, SamplesThemePath);
             SampleUtilities.RegisterTemplate(new Guid(SamplesTemplateId), SamplesTemplateName, SamplesTemplateName, SamplesTemplatePath, SamplesThemeName);
 
