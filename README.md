@@ -1,7 +1,7 @@
 Telerik.Sitefinity.Samples.Locations
 ====================================
 
-The Locations sample project is a content-based module for maintaining a list of locations, such as office addresses, branch locations, an so on. The sample demonstrates the basic functionalities of a content-based module. 
+The Locations sample project is a content-based module for maintaining a list of locations, such as office addresses, branch locations, an so on. The sample demonstrates the basic functionality of a content-based module. 
 
 ### Requirements
 
