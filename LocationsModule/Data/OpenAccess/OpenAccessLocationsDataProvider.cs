@@ -247,6 +247,11 @@ namespace LocationsModule.Data.OpenAccess
 				return SetExpressions(this.GetLocations(), filterExpression, orderExpression, skip, take, ref totalCount);
 			}
 
+            if (itemType == typeof(Comment))
+            {
+                return SetExpressions(this.GetComments(), filterExpression, orderExpression, skip, take, ref totalCount);
+            }
+
 			throw GetInvalidItemTypeException(itemType, this.GetKnownTypes());
 		}
 
@@ -289,7 +294,6 @@ namespace LocationsModule.Data.OpenAccess
 			var urlType = this.GetUrlTypeFor(itemType);
 
 			var	urlData = this.GetUrls(urlType).Where(u => u.Url == url).FirstOrDefault();
-
 
 			if (urlData != null)
 			{
