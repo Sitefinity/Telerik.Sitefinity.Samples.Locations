@@ -37,7 +37,7 @@ Sitefinity ships with OpenAccess ORM. To use OpenAccess in the data provider of 
 
 
 1. From the context menu of the project **LocationsModule**, click _Unload Project_.
-2. From the context menu of the unloaded project, click _Edit LocationsModule.csproj.csproj_.
+2. From the context menu of the unloaded project, click _Edit LocationsModule.csproj_.
 3. Find the **<ProjectExtensions>** tag and replace it with the following lines of code:
 ```xml
 <ProjectExtensions>
