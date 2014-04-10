@@ -13,6 +13,13 @@ The Locations sample project is a content-based module for maintaining a list of
 
 * Microsoft SQL Server 2008R2 or later versions
 
+### Prerequisites
+
+Clear the NuGet cache files. To do this:
+
+1. In Windows Explorer, open the **%localappdata%\NuGet\Cache** folder.
+2. Select all files and delete them.
+
 
 ### Installation instructions: SDK Samples from GitHub
 
