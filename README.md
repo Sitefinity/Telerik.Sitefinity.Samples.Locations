@@ -43,7 +43,7 @@ The project refers to the following NuGet packages:
 * Telerik.Web.UI.nupkg
 
 
-*8SitefinityWebApp** library
+**SitefinityWebApp** library
 
 * Telerik.Sitefinity.All.nupkg
 
