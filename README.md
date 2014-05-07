@@ -5,7 +5,7 @@ The Locations sample project is a content-based module for maintaining a list of
 
 ### Requirements
 
-* Sitefinity 6.3 license
+* Sitefinity license
 
 * .NET Framework 4
 
@@ -34,9 +34,9 @@ The project refers to the following NuGet packages:
 
 * Telerik.Sitefinity.Core.nupkg
 
-* OpenAccess.Core.nupkg
+* Telerik.DataAccess.Core.nupkg
 
-* OpenAccess.CodeFirst.nupkg
+* Telerik.DataAccess.Fluent.nupkg
 
 * Telerik.Sitefinity.Content.nupkg
 
@@ -52,7 +52,7 @@ The project refers to the following NuGet packages:
 
 * Telerik.Sitefinity.Core.nupkg
 
-* OpenAccess.Core.nupkg
+* Telerik.DataAccess.Core.nupkg
 
 * Telerik.Sitefinity.Content.nupkg
 
