@@ -1,6 +1,8 @@
 Telerik.Sitefinity.Samples.Locations
 ====================================
 
+[![Build Status](http://sdk-jenkins-ci.cloudapp.net/buildStatus/icon?job=Telerik.Sitefinity.Samples.Locations.CI)](http://sdk-jenkins-ci.cloudapp.net/job/Telerik.Sitefinity.Samples.Locations.CI/)
+
 The Locations sample project is a content-based module for maintaining a list of locations, such as office addresses, branch locations, an so on. The sample demonstrates the basic functionality of a content-based module. 
 
 ### Requirements
