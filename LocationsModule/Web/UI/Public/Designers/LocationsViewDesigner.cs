@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using LocationsModule.Model;
+using Telerik.Sitefinity.Web.UI.ControlDesign;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Web.Configuration;
-using Telerik.Sitefinity.Web.UI.ControlDesign;
+using LocationsModule.Model;
 
 namespace LocationsModule.Web.UI.Public.Designers
 {

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using LocationsModule.Data;
 using LocationsModule.Model;
+using LocationsModule.Data;
 using LocationsModule.Web.Services.Data;
-using Telerik.Sitefinity.Modules;
 using Telerik.Sitefinity.Modules.GenericContent;
+using Telerik.Sitefinity.Modules;
 
 namespace LocationsModule.Web.Services
 {

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Linq;
 using System.Web.UI;
-using LocationsModule.Data;
-using LocationsModule.Model;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Localization.Configuration;
 using Telerik.Sitefinity.Modules;
@@ -13,6 +10,9 @@ using Telerik.Sitefinity.Web.UI.ContentUI.Views.Backend;
 using Telerik.Sitefinity.Web.UI.Templates;
 using Telerik.Sitefinity.Web.UrlEvaluation;
 using Telerik.Web.UI;
+using LocationsModule.Data;
+using LocationsModule.Model;
+using System;
 
 namespace LocationsModule.Web.UI.Public
 {
@@ -45,7 +45,6 @@ namespace LocationsModule.Web.UI.Public
 				var path = "~/LocationTemplates/" + layoutTemplateName;
 				return path;
 			}
-
 			set
 			{
 				base.LayoutTemplatePath = value;
@@ -104,7 +103,7 @@ namespace LocationsModule.Web.UI.Public
             {
                 query = this.EvaluateUrl(query, "Date", "PublicationDate", this.Host.UrlEvaluationMode, this.Host.UrlKeyPrefix);
                 query = this.EvaluateUrl(query, "Author", "Owner", this.Host.UrlEvaluationMode, this.Host.UrlKeyPrefix);
-                query = this.EvaluateUrl(query, "Taxonomy", string.Empty, typeof(LocationItem), this.Host.UrlEvaluationMode, this.Host.UrlKeyPrefix);
+                query = this.EvaluateUrl(query, "Taxonomy", "", typeof(LocationItem), this.Host.UrlEvaluationMode, this.Host.UrlKeyPrefix);
             }
 
 			// modify pager based on query results
@@ -142,11 +141,12 @@ namespace LocationsModule.Web.UI.Public
 			}
 		}
 
-        /// <summary>
-        /// Configures the pager.
-        /// </summary>
-        /// <param name="virtualItemCount">The virtual item count.</param>
-        /// <param name="masterDefinition">The master definition.</param>
+
+		/// <summary>
+		/// Configures the pager.
+		/// </summary>
+		/// <param name="vrtualItemCount">The virtual item count.</param>
+		/// <param name="masterDefinition">The master definition.</param>
 		protected virtual void ConfigurePager(int virtualItemCount, IContentViewMasterDefinition masterDefinition)
 		{
 			if (masterDefinition.AllowPaging.HasValue &&

@@ -4,18 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
-using LocationsModule.Data;
-using LocationsModule.Model;
+using Telerik.Sitefinity.Configuration;
+using Telerik.Sitefinity.Abstractions.VirtualPath.Configuration;
 using LocationsModule.Web.UI.Public;
 using Telerik.Sitefinity.Abstractions;
-using Telerik.Sitefinity.Abstractions.VirtualPath.Configuration;
-using Telerik.Sitefinity.Configuration;
-using Telerik.Sitefinity.Data.OA;
-using Telerik.Sitefinity.Samples.Common;
-using Telerik.Sitefinity.Services;
+using LocationsModule.Data;
+using LocationsModule.Model;
 using Telerik.Sitefinity.Taxonomies;
 using Telerik.Sitefinity.Taxonomies.Model;
 using Telerik.Sitefinity.Web.UI.ContentUI.Enums;
+using Telerik.Sitefinity.Samples.Common;
+using Telerik.Sitefinity.Data.OA;
+using Telerik.Sitefinity.Services;
 
 namespace SitefinityWebApp
 {
@@ -141,47 +141,53 @@ namespace SitefinityWebApp
 			}
 		}
 		
-		private void CreateLocation(LocationsManager mgr, string title, string address, string city, string region, string postalCode, string country, string continent)
+		private void CreateLocation(LocationsManager mgr, string Title, string Address, string City, string Region, string PostalCode, string Country, string Continent)
 		{
 			var location = mgr.CreateLocation();
-			location.Title = title;
-			location.Address = address;
-			location.City = city;
-			location.Region = region;
-			location.PostalCode = postalCode;
-			location.Country = country;
+			location.Title = Title;
+			location.Address = Address;
+			location.City = City;
+			location.Region = Region;
+			location.PostalCode = PostalCode;
+			location.Country = Country;
 			location.Content = Content;
-			location.UrlName = title.ToLower().Replace(" ", "-");
+			location.UrlName = Title.ToLower().Replace(" ", "-");
 
 			// add taxonomy and save
 			var taxonomyMgr = TaxonomyManager.GetManager();
-			var taxon = taxonomyMgr.GetTaxa<HierarchicalTaxon>().Where(t => t.Name == continent).Select(t => t.Id).ToArray();
+			var taxon = taxonomyMgr.GetTaxa<HierarchicalTaxon>().Where(t => t.Name == Continent).Select(t => t.Id).ToArray();
 			location.Organizer.AddTaxa("Category", taxon);
 			mgr.RecompileItemUrls<LocationItem>(location);
 		}
 
 		protected void Session_Start(object sender, EventArgs e)
 		{
+
 		}
 
 		protected void Application_BeginRequest(object sender, EventArgs e)
 		{
+
 		}
 
 		protected void Application_AuthenticateRequest(object sender, EventArgs e)
 		{
+
 		}
 
 		protected void Application_Error(object sender, EventArgs e)
 		{
+
 		}
 
 		protected void Session_End(object sender, EventArgs e)
 		{
+
 		}
 
 		protected void Application_End(object sender, EventArgs e)
 		{
+
 		}
 
 		private const string Content = @"<p>Telerik’s mission is to make software development easier and more enjoyable. Our tools for agile project management, collaboration, development and testing allow companies of all sizes to create richer, more stable and aesthetic software faster than ever before. Trusted by over 100,000 customers worldwide for our devotion to quality and customer care, Telerik helps technical and business professionals maximize their productivity and ""deliver more than expected"" every day.</p> <p>As true craftsmen, we don't believe in compromises and our goal is to only release tools that we can be proud of.</p>";

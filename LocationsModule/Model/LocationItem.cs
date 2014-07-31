@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Text;
+using System.Runtime.Serialization;
 using Telerik.Sitefinity;
 using Telerik.Sitefinity.GenericContent.Model;
 using Telerik.Sitefinity.Model;
@@ -48,7 +48,6 @@ namespace LocationsModule.Model
 					this.content = this.GetString("Content");
 				return this.ApplyContentFilters(this.content);
 			}
-
 			set
 			{
 				this.content = value;
@@ -57,7 +56,7 @@ namespace LocationsModule.Model
 		}
 
 		/// <summary>
-		/// Gets or sets the location address
+		/// Location address
 		/// </summary>
 		[DataMember]
 		public string Address
@@ -67,7 +66,7 @@ namespace LocationsModule.Model
 		}
 
 		/// <summary>
-		/// Gets or sets the location city
+		/// Location city
 		/// </summary>
 		[DataMember]
 		public string City
@@ -77,7 +76,7 @@ namespace LocationsModule.Model
 		}
 
 		/// <summary>
-		/// Gets or sets the location region (state)
+		/// Location region (state)
 		/// </summary>
 		[DataMember]
 		public string Region
@@ -87,7 +86,7 @@ namespace LocationsModule.Model
 		}
 
 		/// <summary>
-		/// Gets or sets the location postal code
+		/// Location postal code
 		/// </summary>
 		[DataMember]
 		public string PostalCode
@@ -97,7 +96,7 @@ namespace LocationsModule.Model
 		}
 
 		/// <summary>
-		/// Gets or sets the location region (state)
+		/// Location region (state)
 		/// </summary>
 		[DataMember]
 		public string Country
@@ -111,7 +110,7 @@ namespace LocationsModule.Model
 		#region ILocatable
 
 		/// <summary>
-		/// Gets a value indicating whether to auto generate an unique URL.
+		/// Gets or sets a value indicating whether to auto generate an unique URL.
 		/// </summary>
 		/// <value>
 		/// 	<c>true</c> if to auto generate an unique URL otherwise, <c>false</c>.

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using LocationsModule.Model;
-using Telerik.OpenAccess;
-using Telerik.OpenAccess.Metadata.Fluent;
-using Telerik.OpenAccess.Metadata.Fluent.Advanced;
 using Telerik.Sitefinity;
 using Telerik.Sitefinity.Model;
+using Telerik.OpenAccess.Metadata.Fluent;
+using Telerik.OpenAccess.Metadata.Fluent.Advanced;
+using LocationsModule.Model;
+using Telerik.OpenAccess;
 
 namespace LocationsModule.Data.OpenAccess
 {
@@ -17,20 +17,17 @@ namespace LocationsModule.Data.OpenAccess
 		/// Initializes a new instance of the <see cref="LocationsFluentMapping"/> class.
 		/// </summary>
 		/// <param name="context">The context.</param>
-		public LocationsFluentMapping(IDatabaseMappingContext context) : base(context) 
-        { 
-        }
+		public LocationsFluentMapping(IDatabaseMappingContext context) : base(context) { }
 
-        /// <summary>
-        /// Creates and returns a collection of OpenAccess mappings
-        /// </summary>
-        /// <returns></returns>
+		/// <summary>
+		/// Creates and returns a collection of OpenAccess mappings
+		/// </summary>
 		public override IList<MappingConfiguration> GetMapping()
 		{
 			// initialize and return mappings
 			var mappings = new List<MappingConfiguration>();
-			this.MapItem(mappings);
-			this.MapUrlData(mappings);
+			MapItem(mappings);
+			MapUrlData(mappings);
 			return mappings;
 		}
 

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using LocationsModule.Web.UI.Public.Designers;
-using Telerik.Sitefinity.Modules.Pages.Web.UI;
 using Telerik.Sitefinity.Web.UI.ContentUI;
+using Telerik.Sitefinity.Modules.Pages.Web.UI;
 using Telerik.Sitefinity.Web.UI.ControlDesign;
+using LocationsModule.Web.UI.Public.Designers;
 
 namespace LocationsModule.Web.UI.Public
 {
@@ -26,7 +26,6 @@ namespace LocationsModule.Web.UI.Public
 				if (String.IsNullOrEmpty(base.ControlDefinitionName)) return LocationsModule.ModuleName;
 				return base.ModuleName;
 			}
-
 			set
 			{
 				base.ModuleName = value;
@@ -46,7 +45,6 @@ namespace LocationsModule.Web.UI.Public
 					return LocationsDefinitions.FrontendDefinitionName;
 				return base.ControlDefinitionName;
 			}
-
 			set
 			{
 				base.ControlDefinitionName = value;
@@ -67,7 +65,6 @@ namespace LocationsModule.Web.UI.Public
 
 				return LocationsDefinitions.FrontendListViewName;
 			}
-
 			set
 			{
 				base.MasterViewName = value;
@@ -88,7 +85,6 @@ namespace LocationsModule.Web.UI.Public
 
 				return LocationsDefinitions.FrontendDetailViewName;
 			}
-
 			set
 			{
 				base.DetailViewName = value;

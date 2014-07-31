@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Configuration;
 using System.Linq;
 using System.Text;
-using LocationsModule.Data.OpenAccess;
-using LocationsModule.Web.UI;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Modules.GenericContent.Configuration;
+using LocationsModule.Data.OpenAccess;
+using System.Collections.Specialized;
 using Telerik.Sitefinity.Web.UI.ContentUI.Config;
+using System.Configuration;
+using LocationsModule.Web.UI;
 
 namespace LocationsModule.Configuration
 {
