@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Telerik.Sitefinity.Services;
-using Telerik.Sitefinity.Web.UI.ContentUI.Config;
-using Telerik.Sitefinity.Configuration;
+using System.Web.UI;
 using LocationsModule.Model;
-using Telerik.Sitefinity.Web.UI.ContentUI.Views.Backend.Master.Config;
+using LocationsModule.Web.UI.Public;
+using Telerik.Sitefinity.Configuration;
+using Telerik.Sitefinity.Localization;
+using Telerik.Sitefinity.Modules;
+using Telerik.Sitefinity.Services;
 using Telerik.Sitefinity.Web.UI.Backend.Elements.Config;
 using Telerik.Sitefinity.Web.UI.Backend.Elements.Enums;
-using Telerik.Sitefinity.Modules;
 using Telerik.Sitefinity.Web.UI.Backend.Elements.Widgets;
+using Telerik.Sitefinity.Web.UI.ContentUI.Config;
 using Telerik.Sitefinity.Web.UI.ContentUI.Views.Backend.Detail;
-using Telerik.Sitefinity.Web.UI.Fields.Enums;
-using System.Web.UI;
-using Telerik.Sitefinity.Localization;
+using Telerik.Sitefinity.Web.UI.ContentUI.Views.Backend.Master;
+using Telerik.Sitefinity.Web.UI.ContentUI.Views.Backend.Master.Config;
 using Telerik.Sitefinity.Web.UI.Fields.Config;
+using Telerik.Sitefinity.Web.UI.Fields.Enums;
 using Telerik.Sitefinity.Web.UI.Validation.Config;
 using Telerik.Web.UI;
-using Telerik.Sitefinity.Web.UI.ContentUI.Views.Backend.Master;
-using LocationsModule.Web.UI.Public;
 
 namespace LocationsModule.Web.UI
 {
@@ -308,16 +308,12 @@ namespace LocationsModule.Web.UI
 
 		#region Backend Form Toolbar
 
-		/// <summary>
-		/// Creates the backend form toolbar.
-		/// </summary>
-		/// <param name="detailView">The detail view.</param>
-		/// <param name="resourceClassId">The resource class id.</param>
-		/// <param name="isCreateMode">if set to <c>true</c> [is create mode].</param>
-		/// <param name="itemName">Name of the item.</param>
-		/// <param name="addRevisionHistory">if set to <c>true</c> [add revision history].</param>
-		/// <param name="showPreview">if set to <c>true</c> [show preview].</param>
-		/// <param name="backToItems">The back to items.</param>
+        /// <summary>
+        /// Creates the backend form toolbar.
+        /// </summary>
+        /// <param name="detailView">The detail view.</param>
+        /// <param name="isCreateMode">if set to <c>true</c> [is create mode].</param>
+        /// <param name="showPreview">if set to <c>true</c> [show preview].</param>
 		private static void CreateBackendFormToolbar(DetailFormViewElement detailView, bool isCreateMode, bool showPreview)
 		{
 			// create toolbar
@@ -387,7 +383,6 @@ namespace LocationsModule.Web.UI
 				WrapperTagKey = HtmlTextWriterTag.Span,
 				WidgetType = typeof(CommandWidget)
 			});
-
 
 			detailView.Toolbar.Sections.Add(toolbarSectionElement);
 		}
@@ -648,7 +643,6 @@ namespace LocationsModule.Web.UI
 			};
 
 			// *** define views ***
-
 			#region Locations List View
 
 			// define element

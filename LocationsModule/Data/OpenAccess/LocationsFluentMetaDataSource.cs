@@ -2,21 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Telerik.Sitefinity.Modules.GenericContent.Data;
-using Telerik.Sitefinity.Model;
 using Telerik.Sitefinity.Data.OA;
+using Telerik.Sitefinity.Model;
+using Telerik.Sitefinity.Modules.GenericContent.Data;
 
 namespace LocationsModule.Data.OpenAccess
 {
-	class LocationsFluentMetadataSource : ContentBaseMetadataSource
+	public class LocationsFluentMetadataSource : ContentBaseMetadataSource
 	{
-		public LocationsFluentMetadataSource() : base(null) { }
+		public LocationsFluentMetadataSource() : base(null) 
+        { 
+        }
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="LocationsFluentMetadataSource"/> class.
 		/// </summary>
 		/// <param name="context">The context.</param>
-		public LocationsFluentMetadataSource(IDatabaseMappingContext context) : base(context) { }
+		public LocationsFluentMetadataSource(IDatabaseMappingContext context) : base(context) 
+        { 
+        }
 
 		/// <summary>
 		/// Builds the custom mappings for the data provider.

@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Telerik.Sitefinity.Web.UI.ContentUI.Views.Backend;
-using Telerik.Web.UI;
+using System.Web;
 using System.Web.UI;
-using Telerik.Sitefinity.Web.UI.Templates;
+using LocationsModule.Model;
 using Telerik.Sitefinity.Web.UI;
 using Telerik.Sitefinity.Web.UI.ContentUI.Contracts;
-using LocationsModule.Model;
-using System.Web;
+using Telerik.Sitefinity.Web.UI.ContentUI.Views.Backend;
+using Telerik.Sitefinity.Web.UI.Templates;
+using Telerik.Web.UI;
 
 namespace LocationsModule.Web.UI.Public
 {
@@ -42,6 +42,7 @@ namespace LocationsModule.Web.UI.Public
 				var path = "~/LocationTemplates/" + layoutTemplateName;
 				return path;
 			}
+
 			set
 			{
 				base.LayoutTemplatePath = value;
@@ -89,6 +90,7 @@ namespace LocationsModule.Web.UI.Public
 					this.Controls.Clear();
 					this.Controls.Add(new LiteralControl("A location item was not selected or has been deleted. Please select another one."));
 				}
+
 				return;
 			}
 			

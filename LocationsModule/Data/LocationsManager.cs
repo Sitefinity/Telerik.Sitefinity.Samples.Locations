@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using LocationsModule.Configuration;
 using LocationsModule.Data.OpenAccess;
 using LocationsModule.Model;
-using LocationsModule.Configuration;
 using Telerik.Sitefinity;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Data;
@@ -21,20 +21,26 @@ namespace LocationsModule.Data
 		/// <summary>
 		/// Initializes a new instance of the <see cref="LocationsManager"/> class.
 		/// </summary>
-		public LocationsManager() : this(null) { }
+		public LocationsManager() : this(null) 
+        { 
+        }
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="LocationsManager"/> class.
 		/// </summary>
 		/// <param name="providerName">Name of the provider.</param>
-		public LocationsManager(string providerName) : base(providerName) { }
+		public LocationsManager(string providerName) : base(providerName) 
+        { 
+        }
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="LocationsManager"/> class.
 		/// </summary>
 		/// <param name="providerName">Name of the provider.</param>
 		/// <param name="transactionName">Name of the transaction.</param>
-		public LocationsManager(string providerName, string transactionName) : base(providerName, transactionName) { }
+		public LocationsManager(string providerName, string transactionName) : base(providerName, transactionName) 
+        { 
+        }
 
 		#endregion
 
@@ -44,15 +50,20 @@ namespace LocationsModule.Data
 		/// Gets the default manager.
 		/// </summary>
 		/// <returns></returns>
-		public static LocationsManager GetManager() { return ManagerBase<OpenAccessLocationsDataProvider>.GetManager<LocationsManager>(); }
+		public static LocationsManager GetManager() 
+        { 
+            return ManagerBase<OpenAccessLocationsDataProvider>.GetManager<LocationsManager>(); 
+        }
 
 		/// <summary>
 		/// Gets the default manager.
 		/// </summary>
 		/// <param name="providerName">Name of the provider.</param>
 		/// <returns></returns>
-		public static LocationsManager GetManager(string providerName) { return ManagerBase<OpenAccessLocationsDataProvider>.GetManager<LocationsManager>(providerName); }
-
+		public static LocationsManager GetManager(string providerName) 
+        { 
+            return ManagerBase<OpenAccessLocationsDataProvider>.GetManager<LocationsManager>(providerName); 
+        }
 
 		/// <summary>
 		/// Gets the manager.
@@ -60,7 +71,10 @@ namespace LocationsModule.Data
 		/// <param name="providerName">Name of the provider.</param>
 		/// <param name="transactionName">Name of the transaction.</param>
 		/// <returns></returns>
-		public static LocationsManager GetManager(string providerName, string transactionName) { return ManagerBase<OpenAccessLocationsDataProvider>.GetManager<LocationsManager>(providerName, transactionName); }
+		public static LocationsManager GetManager(string providerName, string transactionName) 
+        { 
+            return ManagerBase<OpenAccessLocationsDataProvider>.GetManager<LocationsManager>(providerName, transactionName); 
+        }
 
 		#endregion
 
@@ -115,40 +129,57 @@ namespace LocationsModule.Data
 		/// Creates a new location item.
 		/// </summary>
 		/// <returns></returns>
-		public LocationItem CreateLocation() { return this.Provider.CreateLocation(); }
+		public LocationItem CreateLocation() 
+        { 
+            return this.Provider.CreateLocation(); 
+        }
 
 		/// <summary>
 		/// Creates a new location item with the specified id.
 		/// </summary>
 		/// <param name="id">The location item id.</param>
-		/// <param name="applicationName">Name of the application.</param>
 		/// <returns></returns>
-		public LocationItem CreateLocation(Guid id) { return this.Provider.CreateLocation(id); }
+		public LocationItem CreateLocation(Guid id) 
+        { 
+            return this.Provider.CreateLocation(id); 
+        }
 
 		/// <summary>
 		/// Gets the location item with the specified id.
 		/// </summary>
 		/// <param name="id">The location item id.</param>
 		/// <returns></returns>
-		public LocationItem GetLocation(Guid id) { return this.Provider.GetLocation(id); }
+		public LocationItem GetLocation(Guid id) 
+        { 
+            return this.Provider.GetLocation(id); 
+        }
 
 		/// <summary>
 		/// Gets the full list of location items.
 		/// </summary>
 		/// <returns></returns>
-		public IQueryable<LocationItem> GetLocations() { return this.Provider.GetLocations(); }
+		public IQueryable<LocationItem> GetLocations() 
+        { 
+            return this.Provider.GetLocations(); 
+        }
 
 		/// <summary>
 		/// Deletes the specified location item.
 		/// </summary>
 		/// <param name="location">The location item.</param>
-		public void DeleteLocation(LocationItem location) { this.Provider.DeleteLocation(location); }
+		public void DeleteLocation(LocationItem location) 
+        { 
+            this.Provider.DeleteLocation(location); 
+        }
 
 		/// <summary>
 		/// Deletes location item with the specified id.
 		/// </summary>
 		/// <param name="id">The id.</param>
-		public void DeleteLocation(Guid id) { this.Provider.DeleteLocation(this.Provider.GetLocation(id)); }
+		public void DeleteLocation(Guid id) 
+        { 
+            this.Provider.DeleteLocation(this.Provider.GetLocation(id)); 
+        }
 
 		#endregion
 
@@ -443,7 +474,6 @@ namespace LocationsModule.Data
 		}
 
 		#endregion
-
 
 		#endregion
 	}

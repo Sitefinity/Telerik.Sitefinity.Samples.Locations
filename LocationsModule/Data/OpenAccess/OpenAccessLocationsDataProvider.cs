@@ -1,20 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Collections;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Reflection;
+using System.Text;
 using LocationsModule.Model;
-using Telerik.Sitefinity.Modules.GenericContent.Data;
-using Telerik.Sitefinity.Modules.GenericContent;
-using Telerik.Sitefinity.Data;
 using Telerik.OpenAccess.Metadata;
-using Telerik.Sitefinity.Security;
-using Telerik.Sitefinity.Model;
+using Telerik.Sitefinity.Data;
 using Telerik.Sitefinity.Data.Linq;
 using Telerik.Sitefinity.Data.Linq.Dynamic;
-using System.Reflection;
 using Telerik.Sitefinity.GenericContent.Model;
-using System.Globalization;
+using Telerik.Sitefinity.Model;
+using Telerik.Sitefinity.Modules.GenericContent;
+using Telerik.Sitefinity.Modules.GenericContent.Data;
+using Telerik.Sitefinity.Security;
 
 namespace LocationsModule.Data.OpenAccess
 {
@@ -81,6 +81,7 @@ namespace LocationsModule.Data.OpenAccess
 			{
 				this.GetContext().Add(location);
 			}
+
 			return location;
 		}
 
@@ -307,10 +308,10 @@ namespace LocationsModule.Data.OpenAccess
 					item.Provider = this;
 				return item;
 			}
+
 			redirectUrl = null;
 			return null;
 		}
-
 
 		/// <summary>
 		/// Gets the items by taxon.
@@ -359,6 +360,7 @@ namespace LocationsModule.Data.OpenAccess
                     query = query.Take(take);
                 return query;
             }
+
             throw GetInvalidItemTypeException(itemType, this.GetKnownTypes());
 		}
 

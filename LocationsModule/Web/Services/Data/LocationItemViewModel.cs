@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Telerik.Sitefinity.GenericContent.Model;
 using LocationsModule.Model;
-using Telerik.Sitefinity.Modules.GenericContent;
+using Telerik.Sitefinity.GenericContent.Model;
 using Telerik.Sitefinity.Modules;
+using Telerik.Sitefinity.Modules.GenericContent;
 
 namespace LocationsModule.Web.Services.Data
 {
@@ -16,7 +16,9 @@ namespace LocationsModule.Web.Services.Data
 		/// <summary>
 		/// Initializes a new instance of the <see cref="LocationItemViewModel"/> class.
 		/// </summary>
-		public LocationItemViewModel() : base() { }
+		public LocationItemViewModel() : base() 
+        { 
+        }
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="LocationItemViewModel"/> class.
@@ -63,8 +65,11 @@ namespace LocationsModule.Web.Services.Data
 		#region Public Properties
 
 		public string Address { get; set; }
+
 		public string City { get; set; }
+
 		public string Region { get; set; }
+
 		public string PostalCode { get; set; }
 
 		#endregion
