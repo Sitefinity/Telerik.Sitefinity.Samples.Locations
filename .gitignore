@@ -188,3 +188,4 @@ FakesAssemblies/
 SitefinityWebApp/.nuget/NuGet.exe
 SitefinityWebApp/App_Data/Sitefinity/Configuration/*
 !SitefinityWebApp/App_Data/Sitefinity/Configuration/StartupConfig.config
+README.md.orig
