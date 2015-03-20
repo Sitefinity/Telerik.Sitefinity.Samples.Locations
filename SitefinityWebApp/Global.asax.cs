@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Security;
-using System.Web.SessionState;
-using Telerik.Sitefinity.Configuration;
-using Telerik.Sitefinity.Abstractions.VirtualPath.Configuration;
 using LocationsModule.Web.UI.Public;
 using Telerik.Sitefinity.Abstractions;
 using LocationsModule.Data;
@@ -14,8 +8,8 @@ using Telerik.Sitefinity.Taxonomies;
 using Telerik.Sitefinity.Taxonomies.Model;
 using Telerik.Sitefinity.Web.UI.ContentUI.Enums;
 using Telerik.Sitefinity.Samples.Common;
-using Telerik.Sitefinity.Data.OA;
 using Telerik.Sitefinity.Services;
+using Telerik.Sitefinity.Data;
 
 namespace SitefinityWebApp
 {
@@ -34,13 +28,16 @@ namespace SitefinityWebApp
 
 		protected void Application_Start(object sender, EventArgs e)
 		{
-			Telerik.Sitefinity.Abstractions.Bootstrapper.Initializing += new EventHandler<Telerik.Sitefinity.Data.ExecutingEventArgs>(Bootstrapper_Initializing);
-			Telerik.Sitefinity.Abstractions.Bootstrapper.Initialized += new EventHandler<Telerik.Sitefinity.Data.ExecutedEventArgs>(Bootstrapper_Initialized);
+            Bootstrapper.Initialized += Bootstrapper_Initialized;
 		}
 
-        protected void Bootstrapper_Initialized(object sender, Telerik.Sitefinity.Data.ExecutedEventArgs args)
+        void Bootstrapper_Initialized(object sender, ExecutedEventArgs e)
         {
-            if (args.CommandName == "Bootstrapped")
+            if (e.CommandName == "RegisterRoutes")
+            {
+                SampleUtilities.RegisterModule<LocationsModule.LocationsModule>("Locations", "A content-based module for maintaining a list of locations, such as office addresses, branch locations, etc.");
+            }
+            if ((Bootstrapper.IsDataInitialized) && (e.CommandName == "Bootstrapped"))
             {
                 SystemManager.RunWithElevatedPrivilegeDelegate worker = new SystemManager.RunWithElevatedPrivilegeDelegate(CreateSampleWorker);
                 SystemManager.RunWithElevatedPrivilege(worker);
@@ -128,18 +125,9 @@ namespace SitefinityWebApp
 
             // save locations
             mgr.SaveChanges();
-            SampleUtilities.CreateUsersAndRoles();
 
             #endregion
         }
-
-		protected void Bootstrapper_Initializing(object sender, Telerik.Sitefinity.Data.ExecutingEventArgs args)
-		{
-			if (args.CommandName == "RegisterRoutes")
-			{
-                SampleUtilities.RegisterModule<LocationsModule.LocationsModule>("Locations", "A content-based module for maintaining a list of locations, such as office addresses, branch locations, etc.");
-			}
-		}
 		
 		private void CreateLocation(LocationsManager mgr, string Title, string Address, string City, string Region, string PostalCode, string Country, string Continent)
 		{

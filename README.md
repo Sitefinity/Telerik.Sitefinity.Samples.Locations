@@ -8,11 +8,8 @@ The Locations sample project is a content-based module for maintaining a list of
 ### Requirements
 
 * Sitefinity license
-
 * .NET Framework 4
-
 * Visual Studio 2012
-
 * Microsoft SQL Server 2008R2 or later versions
 
 ### Prerequisites
@@ -25,21 +22,18 @@ Clear the NuGet cache files. To do this:
 
 ### Installation instructions: SDK Samples from GitHub
 
+1. In Solution Explorer, navigate to _SitefinityWebApp_ » *App_Data* » _Sitefinity_ » _Configuration_ and select the **StartupConfig.config** file. 
+2. Modify the **dbType**, **sqlInstance** and **dbName** values to match your server settings.
+3. Build the solution.
 
-
-1. In Solution Explorer, navigate to _SitefinityWebApp_ -> *App_Data* -> _Sitefinity_ -> _Configuration_ and select the **DataConfig.config** file. 
-2. Modify the **connectionString** value to match your server address.
-
-For version-specific details about the required Sitefinity NuGet packages for this sample application, click on [Releases]
- (https://github.com/Sitefinity-SDK/Telerik.Sitefinity.Samples.Locations/releases).
+For version-specific details about the required Sitefinity NuGet packages for this sample application, click on [Releases](https://github.com/Sitefinity-SDK/Telerik.Sitefinity.Samples.Locations/releases).
 
 
 ### Login
 
 To login to Sitefinity backend, use the following credentials: 
 
-**Username:** admin
-
+**Username:** admin   
 **Password:** password
 
 
