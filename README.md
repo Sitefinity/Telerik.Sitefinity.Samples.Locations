@@ -9,7 +9,7 @@ The Locations sample project is a content-based module for maintaining a list of
 
 * Sitefinity license
 
-* .NET Framework 4
+* .NET Framework 4.5
 
 * Visual Studio 2012
 
