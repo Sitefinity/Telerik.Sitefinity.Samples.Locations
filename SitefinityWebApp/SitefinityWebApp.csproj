@@ -206,9 +206,6 @@
       <HintPath>packages\ServiceStack.Redis.Signed.4.0.44\lib\net40\ServiceStack.Redis.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ServiceStack.ServiceInterface">
-      <HintPath>packages\Sitefinity.ServiceStack.3.9.56\lib\net35\ServiceStack.ServiceInterface.dll</HintPath>
-    </Reference>
     <Reference Include="ServiceStack.Text, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
       <HintPath>packages\ServiceStack.Text.Signed.4.0.44\lib\net40\ServiceStack.Text.dll</HintPath>
       <Private>True</Private>
@@ -376,15 +373,6 @@
     <Reference Include="Telerik.Sitefinity.AmazonCloudSearch, Version=8.2.5900.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
       <HintPath>packages\Telerik.Sitefinity.AmazonCloudSearch.8.2.5900.0\lib\net40\Telerik.Sitefinity.AmazonCloudSearch.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Analytics.Server.Core">
-      <HintPath>packages\Telerik.Sitefinity.Analytics.6.3.5000.0\lib\net40\Telerik.Sitefinity.Analytics.Server.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Analytics.Server.DependencyResolution">
-      <HintPath>packages\Telerik.Sitefinity.Analytics.6.3.5000.0\lib\net40\Telerik.Sitefinity.Analytics.Server.DependencyResolution.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Analytics.Server.GoogleAnalyticsPlugin">
-      <HintPath>packages\Telerik.Sitefinity.Analytics.6.3.5000.0\lib\net40\Telerik.Sitefinity.Analytics.Server.GoogleAnalyticsPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Sitefinity.Analytics.Server.Infrastructure, Version=8.2.5900.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
       <HintPath>packages\Telerik.Sitefinity.Analytics.8.2.5900.0\lib\net40\Telerik.Sitefinity.Analytics.Server.Infrastructure.dll</HintPath>
